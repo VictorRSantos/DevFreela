@@ -19,6 +19,7 @@ namespace DevFreela.API.Controllers
         {
             var user = _userService.GetUser(id);
 
+
             if (user == null) return NotFound();
 
            return Ok(user);
