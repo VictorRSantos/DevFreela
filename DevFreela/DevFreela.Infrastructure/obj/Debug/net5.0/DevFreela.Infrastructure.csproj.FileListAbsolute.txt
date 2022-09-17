@@ -1,0 +1,15 @@
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\DevFreela.Infrastructure.deps.json
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\DevFreela.Infrastructure.dll
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\DevFreela.Infrastructure.pdb
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\DevFreela.Core.dll
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\bin\Debug\net5.0\DevFreela.Core.pdb
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.csproj.AssemblyReference.cache
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.AssemblyInfoInputs.cache
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.AssemblyInfo.cs
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.csproj.CopyComplete
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.dll
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\refint\DevFreela.Infrastructure.dll
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.pdb
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\ref\DevFreela.Infrastructure.dll
