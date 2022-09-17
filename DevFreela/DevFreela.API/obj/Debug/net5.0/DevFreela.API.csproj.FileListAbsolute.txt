@@ -44,6 +44,12 @@ D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\Newtonsoft.Json.dll
 D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\DevFreela.Application.dll
+D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\DevFreela.Core.dll
+D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\DevFreela.Infrastructure.dll
+D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\DevFreela.Application.pdb
+D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\DevFreela.Infrastructure.pdb
+D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\DevFreela.Core.pdb
 D:\Git\DevFreela\DevFreela\DevFreela.API\obj\Debug\net5.0\DevFreela.API.csproj.AssemblyReference.cache
 D:\Git\DevFreela\DevFreela\DevFreela.API\obj\Debug\net5.0\DevFreela.API.GeneratedMSBuildEditorConfig.editorconfig
 D:\Git\DevFreela\DevFreela\DevFreela.API\obj\Debug\net5.0\DevFreela.API.AssemblyInfoInputs.cache
