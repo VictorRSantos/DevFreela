@@ -1,0 +1,5 @@
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.csproj.AssemblyReference.cache
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.AssemblyInfoInputs.cache
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.AssemblyInfo.cs
+D:\Git\DevFreela\DevFreela\DevFreela.Infrastructure\obj\Debug\net5.0\DevFreela.Infrastructure.csproj.CoreCompileInputs.cache
