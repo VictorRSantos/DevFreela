@@ -1297,6 +1297,42 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "DevFreela.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "DevFreela.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DevFreela.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevFreela.Application.dll": {}
+        }
+      },
+      "DevFreela.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/DevFreela.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevFreela.Core.dll": {}
+        }
+      },
+      "DevFreela.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "DevFreela.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DevFreela.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevFreela.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -4466,10 +4502,27 @@
         "system.xml.xdocument.4.0.11.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "DevFreela.Application/1.0.0": {
+      "type": "project",
+      "path": "../DevFreela.Application/DevFreela.Application.csproj",
+      "msbuildProject": "../DevFreela.Application/DevFreela.Application.csproj"
+    },
+    "DevFreela.Core/1.0.0": {
+      "type": "project",
+      "path": "../DevFreela.Core/DevFreela.Core.csproj",
+      "msbuildProject": "../DevFreela.Core/DevFreela.Core.csproj"
+    },
+    "DevFreela.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../DevFreela.Infrastructure/DevFreela.Infrastructure.csproj",
+      "msbuildProject": "../DevFreela.Infrastructure/DevFreela.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "DevFreela.Application >= 1.0.0",
+      "DevFreela.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Core >= 2.2.5",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -4505,7 +4558,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Git\\DevFreela\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj": {
+              "projectPath": "D:\\Git\\DevFreela\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj"
+            },
+            "D:\\Git\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
+              "projectPath": "D:\\Git\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
