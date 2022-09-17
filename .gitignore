@@ -7,3 +7,5 @@
 /DevFreela/.vs/DevFreela/FileContentIndex
 /DevFreela/.vs
 /DevFreela/DevFreela.API/bin/Debug/net5.0
+*.dll
+/DevFreela/DevFreela.Application/obj/Debug/net5.0
