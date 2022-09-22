@@ -18,11 +18,7 @@ namespace DevFreela.API.Controllers
         public IActionResult GetById(int id)
         {
             var user = _userService.GetUser(id);
-<<<<<<< HEAD
 
-
-=======
->>>>>>> camada-api
             if (user == null) return NotFound();
 
            return Ok(user);
