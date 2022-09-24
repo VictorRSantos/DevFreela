@@ -1,0 +1,12 @@
+D:\Git\DevFreela\DevFreela\DevFreela.Core\bin\Debug\net5.0\DevFreela.Core.deps.json
+D:\Git\DevFreela\DevFreela\DevFreela.Core\bin\Debug\net5.0\DevFreela.Core.dll
+D:\Git\DevFreela\DevFreela\DevFreela.Core\bin\Debug\net5.0\DevFreela.Core.pdb
+D:\Git\DevFreela\DevFreela\DevFreela.Core\obj\Debug\net5.0\DevFreela.Core.csproj.AssemblyReference.cache
+D:\Git\DevFreela\DevFreela\DevFreela.Core\obj\Debug\net5.0\DevFreela.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\DevFreela\DevFreela\DevFreela.Core\obj\Debug\net5.0\DevFreela.Core.AssemblyInfoInputs.cache
+D:\Git\DevFreela\DevFreela\DevFreela.Core\obj\Debug\net5.0\DevFreela.Core.AssemblyInfo.cs
+D:\Git\DevFreela\DevFreela\DevFreela.Core\obj\Debug\net5.0\DevFreela.Core.csproj.CoreCompileInputs.cache
+D:\Git\DevFreela\DevFreela\DevFreela.Core\obj\Debug\net5.0\DevFreela.Core.dll
+D:\Git\DevFreela\DevFreela\DevFreela.Core\obj\Debug\net5.0\refint\DevFreela.Core.dll
+D:\Git\DevFreela\DevFreela\DevFreela.Core\obj\Debug\net5.0\DevFreela.Core.pdb
+D:\Git\DevFreela\DevFreela\DevFreela.Core\obj\Debug\net5.0\ref\DevFreela.Core.dll
