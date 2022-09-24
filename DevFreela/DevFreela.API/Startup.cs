@@ -1,7 +1,9 @@
 using DevFreela.API.Models;
+using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.Services.Implementations;
 using DevFreela.Application.Services.Interfaces;
 using DevFreela.Infrastructure.Persistence;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -25,7 +27,7 @@ namespace DevFreela.API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.Configure<OpeningTimeOption>(Configuration.GetSection("OpeningTime"));
+            
 
             // Mapeando appSettings.json
             var connectionString = Configuration.GetConnectionString("DevFreelaCs");
@@ -38,14 +40,11 @@ namespace DevFreela.API
 
             //Usar EntityFramework em Memória
             //services.AddDbContext<DevFreelaDbContext>(options => options.UseInMemoryDatabase("DevFreela"));
-
-
-
-            services.AddScoped<ExampleClass>(e => new ExampleClass {Name = "Initial Stage" });
-
-
-
+            
             services.AddControllers();
+
+            services.AddMediatR(typeof(CreateProjectCommand));
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DevFreela.API", Version = "v1" });
