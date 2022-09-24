@@ -14,5 +14,9 @@
 
 *.dll
 /DevFreela/DevFreela.Application/obj/Debug/net5.0
+
 /DevFreela/DevFreela/Infrastructure/obj
+
+
+/DevFreela/DevFreela.Application/obj
 
