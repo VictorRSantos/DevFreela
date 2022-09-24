@@ -20,3 +20,5 @@
 
 /DevFreela/DevFreela.Application/obj
 
+/DevFreela/DevFreela.Infrastructure/obj/Debug/net5.0/DevFreela.Infrastructure.AssemblyInfoInputs.cache
+/DevFreela/DevFreela.Infrastructure/obj/Debug/net5.0/DevFreela.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
