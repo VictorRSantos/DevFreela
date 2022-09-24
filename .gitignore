@@ -7,11 +7,12 @@
 /DevFreela/.vs/DevFreela/FileContentIndex
 /DevFreela/.vs
 /DevFreela/DevFreela.API/bin/Debug/net5.0
-<<<<<<< HEAD
+
 /DevFreela/DevFreela.Application/obj/Debug/net5.0/DevFreela.Application.AssemblyInfo.cs
 /DevFreela/DevFreela.Application/obj/Debug/net5.0
 /DevFreela/DevFreela.Application/obj
-=======
+
 *.dll
 /DevFreela/DevFreela.Application/obj/Debug/net5.0
->>>>>>> 7e994a464954f03f12206a1710fba2412fcb243a
+/DevFreela/DevFreela/Infrastructure/obj
+
