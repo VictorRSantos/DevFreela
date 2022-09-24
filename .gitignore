@@ -2,16 +2,17 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-DevFreela/.vs/DevFreela
-DevFreela/.vs/ProjectEvaluation
-DevFreela/DevFreela.API/bin/Debug/.net5.0
-DevFreela/DevFreela.API/obj/Debug/.net5.0
-DevFreela/DevFreela.API/bin/Debug/.net5.0/runtimes
-DevFreela/DevFreela.Application/obj/Debug/net5.0
-DevFreela/DevFreela.Application/bin/Debug/net5.0/runtimes
-DevFreela/DevFreela.Core/obj/
-DevFreela/DevFreela.Core/bin/
-DevFreela/DevFreela.Core/obj/Debug/net5.0
-DevFreela/DevFreela.Core/bin/Debug/net5.0
-DevFreela/DevFreela.Infrastructure/bin/Debug/net5.0
-DevFreela/DevFreela.Infrastructure/obj/Debug/net5.0
+/DevFreela/.vs/DevFreela
+/DevFreela/.vs/ProjectEvaluation
+/DevFreela/DevFreela.API/bin/Debug/.net5.0/
+/DevFreela/DevFreela.API/obj/Debug/.net5.0/
+/DevFreela/DevFreela.API/obj/Debug/.net5.0/DevFreela.API.csproj.AssemblyReference.cache
+/DevFreela/DevFreela.API/bin/Debug/.net5.0/runtimes
+/DevFreela/DevFreela.Application/obj/Debug/net5.0
+/DevFreela/DevFreela.Application/bin/Debug/net5.0/runtimes
+/DevFreela/DevFreela.Core/obj/Debug/net5.0/
+/DevFreela/DevFreela.Core/bin/Debug/net5.0/
+/DevFreela/DevFreela.Infrastructure/bin/Debug/net5.0/
+/DevFreela/DevFreela.Infrastructure/obj/Debug/net5.0/
+/DevFreela/DevFreela.Core/obj/project.nuget.cache
+.cache
