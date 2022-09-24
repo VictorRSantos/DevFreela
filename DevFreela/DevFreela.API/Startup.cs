@@ -1,6 +1,10 @@
 using DevFreela.API.Models;
+using DevFreela.Application.Services.Implementations;
+using DevFreela.Application.Services.Interfaces;
+using DevFreela.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -22,6 +26,19 @@ namespace DevFreela.API
         {
 
             services.Configure<OpeningTimeOption>(Configuration.GetSection("OpeningTime"));
+
+            // Mapeando appSettings.json
+            var connectionString = Configuration.GetConnectionString("DevFreelaCs");
+            // Conexao com banco de dados
+            services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionString));
+
+            // Injenção de Dependencia
+            services.AddScoped<IProjectService, ProjectService>();
+            services.AddScoped<IUserService, UserService>();
+
+            //Usar EntityFramework em Memória
+            //services.AddDbContext<DevFreelaDbContext>(options => options.UseInMemoryDatabase("DevFreela"));
+
 
 
             services.AddScoped<ExampleClass>(e => new ExampleClass {Name = "Initial Stage" });
