@@ -1,8 +1,8 @@
 ﻿using MediatR;
 
-namespace DevFreela.Application.InputModels
+namespace DevFreela.Application.Commands.CreateComment
 {
-    public class CreateCommentInputModel
+    public class CreateCommentCommand : IRequest<Unit>
     {
         public string Content { get; set; }
         public int IdProject { get; set; }

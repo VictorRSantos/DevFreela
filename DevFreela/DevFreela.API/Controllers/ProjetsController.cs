@@ -1,5 +1,8 @@
-﻿using DevFreela.Application.Commands.CreateProject;
-using DevFreela.Application.InputModels;
+﻿using DevFreela.Application.Commands.CreateComment;
+using DevFreela.Application.Commands.CreateProject;
+using DevFreela.Application.Commands.DeleteProject;
+using DevFreela.Application.Commands.FinishProject;
+using DevFreela.Application.Commands.UpdateProject;
 using DevFreela.Application.Services.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -10,7 +13,7 @@ namespace DevFreela.API.Controllers
     [Route("api/projects")]
     public class ProjetsController : ControllerBase
     {
-     
+
         private readonly IProjectService _projectService;
         private readonly IMediator _mediator;
 
@@ -48,8 +51,6 @@ namespace DevFreela.API.Controllers
         {
             if (command.Title.Length > 50) return BadRequest();
 
-            //var id = _projectService.Create(inputModel);
-
             var id = await _mediator.Send(command);
 
             return CreatedAtAction(nameof(GetById), new { id = id }, command);
@@ -57,38 +58,46 @@ namespace DevFreela.API.Controllers
 
         // api/projects/3
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] UpdateProjectInputModel inputModel)
+        public async Task<IActionResult> Put(int id, [FromBody] UpdateProjectCommand command)
         {
-            if (inputModel.Description.Length > 200) return BadRequest();
+            if (command.Description.Length > 200) return BadRequest();
 
-            _projectService.Update(inputModel);
-
-            return NoContent();
-        }
-
-        // api/projects/3
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
-        {
-            _projectService.Delete(id);
+            await _mediator.Send(command);
 
             return NoContent();
         }
 
         // api/projects/1/comments
         [HttpPost("{id}/comments")]
-        public IActionResult PostComment(int id, [FromBody] CreateCommentInputModel inputModel)
+        public async Task<IActionResult> PostComment(int id, [FromBody] CreateCommentCommand command)
         {
-            _projectService.CreateComment(inputModel);
+            //_projectService.CreateComment(command);
+
+            await _mediator.Send(command);
 
             return NoContent();
         }
 
+        // api/projects/3
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var command = new DeleteProjectCommand(id);
+
+            await _mediator.Send(command);
+
+            return NoContent();
+        }
+
+
+
         // apí/projects/1/start
         [HttpPut("{id}/start")]
-        public IActionResult Start(int id)
+        public async Task<IActionResult> Start(int id)
         {
-            _projectService.Start(id);
+            var command = new DeleteProjectCommand(id);
+
+            await _mediator.Send(command);
 
             return NoContent();
         }
@@ -96,9 +105,12 @@ namespace DevFreela.API.Controllers
 
         // api/projects/1/finish
         [HttpPut("{id}/finish")]
-        public IActionResult Finish(int id)
+        public async Task<IActionResult> Finish(int id)
         {
-            _projectService.Finish(id);
+            var command = new FinishProjectCommand(id);
+            
+            await _mediator.Send(command);
+
             return NoContent();
         }
 
