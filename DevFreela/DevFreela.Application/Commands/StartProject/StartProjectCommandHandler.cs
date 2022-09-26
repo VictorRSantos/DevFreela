@@ -1,6 +1,5 @@
 ﻿using DevFreela.Infrastructure.Persistence;
 using MediatR;
-using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using System.Linq;
 using System.Threading;
@@ -11,28 +10,22 @@ namespace DevFreela.Application.Commands.StartProject
     public class StartProjectCommandHandler : IRequestHandler<StartProjectCommand, Unit>
     {
         private readonly DevFreelaDbContext _dbContext;
-        private readonly IConfiguration _configuration;
-
+        
         public StartProjectCommandHandler(DevFreelaDbContext dbContext, IConfiguration configuration)
         {
-            _dbContext = dbContext;
-            _configuration = configuration.GetConnectionString("DevFreelaSc");
+            _dbContext = dbContext;        
 
         }
         public async Task<Unit> Handle(StartProjectCommand request, CancellationToken cancellationToken)
         {
+            var project = _dbContext.Projects.SingleOrDefault(p => p.Id == request.Id);
 
-            using (var sqlConnetion = new SqlConnection(_connectioString))
-            {
-                sqlConnetion.Open();
+            project.Start();
 
-                var script = @"UPDATE Projects SET Status = @status, StartedAt = @startedAt WHERE Id = @id";
-
-                sqlConnetion.Execute(script, new { status = project.Status, startedAt = project.StartedAt, id = id });
-            }
-            
+            await _dbContext.SaveChangesAsync();
 
             return Unit.Value;
+          
         }
     }
 }

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Ya7Wi/YpjfTNd6K7kL1rCUhriGWYmYaiiMQ0j6KPZgWxhQeBH/RHOBaQ+PfLPRM+CxHdIz/X48QTnk686H0YdQ==",
+  "dgSpecHash": "rFku0nozUrKzDl/UbRM57KKacbrulz2S0Lqc6f7yqewDeGo6TltHcFKpTCcwxfAvvLUkPPKuCvg24Nw9BgkeOw==",
   "success": true,
   "projectFilePath": "D:\\Git\\DevFreela\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Victor\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\Victor\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\Victor\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Victor\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Victor\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Victor\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
