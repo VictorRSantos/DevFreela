@@ -1,13 +1,22 @@
+using DevFreela.API.Filters;
 using DevFreela.Application.Commands.CreateProject;
+using DevFreela.Application.Commands.CreateUser;
+using DevFreela.Application.Validators;
+using DevFreela.Core.Repositories;
 using DevFreela.Infrastructure.Persistence;
+using DevFreela.Infrastructure.Persistence.Repositories;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 namespace DevFreela.API
 {
@@ -24,7 +33,7 @@ namespace DevFreela.API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            
+
 
             // Mapeando appSettings.json
             var connectionString = Configuration.GetConnectionString("DevFreelaCs");
@@ -32,16 +41,19 @@ namespace DevFreela.API
             services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionString));
 
             // Injenção de Dependencia
-            //services.AddScoped<IProjectService, ProjectService>();
-            //services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ISkillRepository, SkillRepository>();
 
             //Usar EntityFramework em Memória
             //services.AddDbContext<DevFreelaDbContext>(options => options.UseInMemoryDatabase("DevFreela"));
-            
-            services.AddControllers();
+
+            services.AddControllers(option => option.Filters.Add(typeof(ValidationFilter)))// Adicionando Filters
+                .AddFluentValidation(c => c.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
 
             services.AddMediatR(typeof(CreateProjectCommand));
-            
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DevFreela.API", Version = "v1" });
@@ -63,6 +75,8 @@ namespace DevFreela.API
             app.UseRouting();
 
             app.UseAuthorization();
+
+
 
             app.UseEndpoints(endpoints =>
             {
