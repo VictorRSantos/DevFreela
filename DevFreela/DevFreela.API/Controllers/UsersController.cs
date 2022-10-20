@@ -10,11 +10,10 @@ namespace DevFreela.API.Controllers
     [Route("api/users")]
     public class UsersController : ControllerBase
     {
-      
         private readonly IMediator _mediator;
         public UsersController(IMediator mediator)
-        {           
-            _mediator = mediator;   
+        {
+            _mediator = mediator;
         }
 
         [HttpGet("{id}")]
