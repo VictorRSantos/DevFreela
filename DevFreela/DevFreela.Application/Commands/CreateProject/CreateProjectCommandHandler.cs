@@ -20,7 +20,7 @@ namespace DevFreela.Application.Commands.CreateProject
             var project = new Project(request.Title, request.Description, request.IdClient, request.IdFreelancer, request.TotalCost);
 
             await _projectRepository.AddAsync(project);
-           
+
             return project.Id;
         }
     }

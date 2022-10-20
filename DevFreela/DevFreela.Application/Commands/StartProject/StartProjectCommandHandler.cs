@@ -8,7 +8,7 @@ namespace DevFreela.Application.Commands.StartProject
     public class StartProjectCommandHandler : IRequestHandler<StartProjectCommand, Unit>
     {
         private readonly IProjectRepository _projectRepository;
-        
+
         public StartProjectCommandHandler(IProjectRepository projectRepository)
         {
             _projectRepository = projectRepository;
@@ -21,9 +21,9 @@ namespace DevFreela.Application.Commands.StartProject
             project.Start();
 
             await _projectRepository.StartAsync(project);
-                        
+
             return Unit.Value;
-          
+
         }
     }
 }
