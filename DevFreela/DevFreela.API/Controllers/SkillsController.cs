@@ -18,6 +18,6 @@ namespace DevFreela.API.Controllers
         public async Task<IActionResult> Get() => Ok(await _mediator.Send(new GetAllSkillsQuery()));
 
 
-        
+
     }
 }

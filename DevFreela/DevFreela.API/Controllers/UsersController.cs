@@ -12,6 +12,9 @@ namespace DevFreela.API.Controllers
     public class UsersController : ControllerBase
     {
 
+
+
+
         private readonly IMediator _mediator;
         public UsersController(IMediator mediator)
         {
