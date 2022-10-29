@@ -5,12 +5,13 @@ namespace DevFreela.Application.Commands.CreateUser
 {
     public class CreateUserCommand : IRequest<int>
     {
-        public CreateUserCommand(string fullName, string password, string email, DateTime birthDate)
+        public CreateUserCommand(string fullName, string password, string email, DateTime birthDate, string role)
         {
             FullName = fullName;
             Password = password;
             Email = email;
             BirthDate = birthDate;
+            Role = role;
         }
 
         public string FullName { get; private set; }
