@@ -48,6 +48,7 @@ namespace DevFreela.API.Controllers
         [HttpPut("Login")]
         public IActionResult Login([FromBody] LoginModel login)
         {
+            //
             return NoContent();
         }
 
