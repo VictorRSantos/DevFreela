@@ -45,6 +45,7 @@ D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\Humanizer.dll
 D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\MediatR.dll
 D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\MediatR.Contracts.dll
 D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
 D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 D:\Git\DevFreela\DevFreela\DevFreela.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
