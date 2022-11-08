@@ -20,7 +20,7 @@ namespace DevFreela.Application.Queries.GetAllProjects
         {
             var projects = await _projectRepository.GetAllAsync();
 
-            return projects.Select(p => new ProjectViewModel(p.Id, p.Title, p.CreatedAt)).ToList();          
+            return projects.Select(p => new ProjectViewModel(p.Id, p.Title, p.CreatedAt)).ToList();
         }
     }
 }
