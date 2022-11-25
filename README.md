@@ -4,7 +4,7 @@ API REST completa de um sistema de projetos de freelances.
 ### Tecnologias e práticas utilizadas
 - ASP.NET Core com .NET 6
 - Arquitetura Limpa
-- Entity Frameworky Core
+- Entity Framework Core
 - CQRS
 - Padrão Repository
 - Validação de APIs
