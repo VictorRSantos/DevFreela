@@ -43,6 +43,9 @@ namespace DevFreela.API
             // Conexao com banco de dados
             services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionString));
 
+            // Construir Instancias para ser utilizados em diferentes partes do projeto
+            services.AddHttpClient();
+
             // Injenção de Dependencia
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
