@@ -111,7 +111,7 @@ namespace DevFreela.API.Controllers
         public async Task<IActionResult> Finish(int id, [FromBody] FinishProjectCommand command)
         {
 
-            command = new FinishProjectCommand(id);
+            command = new FinishProjectCommand(id, command.CreditCardNumber,command.Cvv, command.ExpiresAt, command.FullName);
 
             var result = await _mediator.Send(command);
 

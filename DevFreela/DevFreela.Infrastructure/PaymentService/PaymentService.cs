@@ -21,7 +21,7 @@ namespace DevFreela.Infrastructure.PaymentService
         public async Task<bool> ProcessPayment(PaymentInfoDTO paymentInfoDTO)
         {
             // Implementar lógica de pagamento com Gateway de Pagamento
-            var url = $"{_paymentsBaseUrl}api/payments";
+            var url = $"{_paymentsBaseUrl}/api/payments";
 
             var paymentInfoJson = JsonSerializer.Serialize(paymentInfoDTO);
 
