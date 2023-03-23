@@ -1,27 +1,24 @@
 using DevFreela.API.Filters;
 using DevFreela.Application.Commands.CreateProject;
-using DevFreela.Application.Commands.CreateUser;
 using DevFreela.Application.Validators;
 using DevFreela.Core.Repositories;
 using DevFreela.Core.Services;
 using DevFreela.Infrastructure.Auth;
+using DevFreela.Infrastructure.MessageBus;
 using DevFreela.Infrastructure.PaymentService;
 using DevFreela.Infrastructure.Persistence;
 using DevFreela.Infrastructure.Persistence.Repositories;
-using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Reflection;
 using System.Text;
 
 namespace DevFreela.API
@@ -52,9 +49,11 @@ namespace DevFreela.API
             services.AddScoped<ISkillRepository, SkillRepository>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IPaymentService, PaymentService>();
+            services.AddScoped<IMessageBusService, MessageBusService>();
 
             //Usar EntityFramework em Memória
-            //services.AddDbContext<DevFreelaDbContext>(options => options.UseInMemoryDatabase("DevFreela"));
+            services.AddDbContext<DevFreelaDbContext>(options => options.UseInMemoryDatabase("DevFreela"));
+
 
             services.AddControllers(option => option.Filters.Add(typeof(ValidationFilter)))// Adicionando Filters
                 .AddFluentValidation(c => c.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
@@ -91,7 +90,7 @@ namespace DevFreela.API
                 });
             });
 
-            // Autenticação JWT
+            //Autenticação JWT
             services
             .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)// Definindo o schema da autenticação, que vai definir o token no  Header
             .AddJwtBearer(option =>

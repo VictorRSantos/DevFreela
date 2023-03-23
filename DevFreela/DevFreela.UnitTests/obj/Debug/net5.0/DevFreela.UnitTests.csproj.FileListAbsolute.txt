@@ -149,3 +149,4 @@ D:\Git\DevFreela\DevFreela\DevFreela.UnitTests\obj\Debug\net5.0\refint\DevFreela
 D:\Git\DevFreela\DevFreela\DevFreela.UnitTests\obj\Debug\net5.0\DevFreela.UnitTests.pdb
 D:\Git\DevFreela\DevFreela\DevFreela.UnitTests\obj\Debug\net5.0\DevFreela.UnitTests.genruntimeconfig.cache
 D:\Git\DevFreela\DevFreela\DevFreela.UnitTests\obj\Debug\net5.0\ref\DevFreela.UnitTests.dll
+D:\Git\DevFreela\DevFreela\DevFreela.UnitTests\bin\Debug\net5.0\RabbitMQ.Client.dll
