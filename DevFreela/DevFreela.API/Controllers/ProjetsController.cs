@@ -120,7 +120,7 @@ namespace DevFreela.API.Controllers
                 return BadRequest("O Pagameto não pode ser processado");
             }
 
-            return NoContent();
+            return Accepted();
         }
 
     }
