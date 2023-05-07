@@ -1,5 +1,6 @@
 using DevFreela.API.Filters;
 using DevFreela.Application.Commands.CreateProject;
+using DevFreela.Application.Consumers;
 using DevFreela.Application.Validators;
 using DevFreela.Core.Repositories;
 using DevFreela.Core.Services;
@@ -39,6 +40,8 @@ namespace DevFreela.API
             var connectionString = Configuration.GetConnectionString("DevFreelaCs");
             // Conexao com banco de dados
             services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionString));
+
+            services.AddHostedService<PaymentApprovedConsumer>();
 
             // Construir Instancias para ser utilizados em diferentes partes do projeto
             services.AddHttpClient();
